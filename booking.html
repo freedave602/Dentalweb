@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Page</title>
+    <link rel="stylesheet" href="booking.css">
+</head>
+<body>
+    <div class="booking-container">
+        <h1>Book an Appointment</h1>
+        <form id="bookingForm">
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" name="fullName" required>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="service">Select Service</label>
+            <select id="service" name="service" required>
+                <option value="" disabled selected>Select a service</option>
+                <option value="Service 1">General Dentistry</option>
+                <option value="Service 2">Teeth Whitinig</option>
+                <option value="Service 3">Orthodontist</option>
+                <option value="Service 4">Emergency</option>
+            </select>
+
+            <label for="description">Further Description</label>
+            <textarea id="description" name="description" rows="4"></textarea>
+
+            <label for="date">Select Date</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="time">Select Time</label>
+            <input type="time" id="time" name="time" required>
+
+            <button type="submit">Book</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('bookingForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // Add your code here to handle form submission and store data in the database
+            alert('Booking information submitted!');
+        });
+    </script>
+</body>
+</html>
